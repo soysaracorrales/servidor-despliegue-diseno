@@ -4,21 +4,21 @@ Presentación interactiva desarrollada como proyecto para los módulos de **Ento
 
 ## Secciones
 
-- `/` — Inicio: presentación y acceso rápido a cada sección
-- `/servidor` — Tipos de servidores, Apache, Nginx y LiteSpeed con ejemplos de configuración
-- `/despliegue` — Qué es Docker, cómo se despliega una aplicación con Docker y por qué es útil
-- `/diseno` — Vite, React, JSX y Tailwind CSS con ejemplos de código
-- `/conclusion` — Reflexión final, aprendizajes, mejoras y herramientas favoritas
-- `/contacto` — Formulario de contacto y perfil personal
+- `/` - Inicio: presentación y acceso rápido a cada sección
+- `/servidor` - Tipos de servidores, Apache, Nginx y LiteSpeed con ejemplos de configuración
+- `/despliegue` - Qué es Docker, cómo se despliega una aplicación con Docker y por qué es útil
+- `/diseno` - Vite, React, JSX y Tailwind CSS con ejemplos de código
+- `/conclusion` - Reflexión final, aprendizajes, mejoras y herramientas favoritas
+- `/contacto` - Formulario de contacto y perfil personal
 
 ---
 
 ## Stack
 
-- **Vite 8** — servidor de desarrollo y empaquetado
-- **React 19** — interfaz por componentes
-- **Tailwind CSS 4** — estilos con clases predefinidas
-- **React Router 7** — enrutamiento client-side
+- **Vite 8** - servidor de desarrollo y empaquetado
+- **React 19** - interfaz por componentes
+- **Tailwind CSS 4** - estilos con clases predefinidas
+- **React Router 7** - enrutamiento client-side
 
 ---
 
@@ -62,5 +62,5 @@ src/
 
 ## Autora
 
-**Sara Corrales** — Desarrolladora web · Cáceres, Extremadura  
+**Sara Corrales** | Desarrolladora web - Cáceres, Extremadura  
 [GitHub](https://github.com/soysaracorrales) · [LinkedIn](https://www.linkedin.com/in/sara-corrales-rol/) · [soysaracorralesrol@gmail.com](mailto:soysaracorralesrol@gmail.com)
