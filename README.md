@@ -48,7 +48,7 @@ src/
 │   ├── comunes/        # BarraNavegacion, PiePagina, Introduccion...
 │   ├── inicio/         # Hero, TarjetasSecciones, SobreMi...
 │   ├── servidor/       # Deslizador + 13 diapositivas
-│   ├── despliegue/     # Deslizador + 
+│   ├── despliegue/     # Deslizador + 15 diapositivas
 │   ├── diseno/         # Deslizador + 10 diapositivas
 │   └── conclusion/     # Deslizador + 6 diapositivas
 ├── paginas/            # Inicio, Servidor, Despliegue, Diseno, Conclusion, Contacto
