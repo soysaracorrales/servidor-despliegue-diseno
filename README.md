@@ -1,4 +1,4 @@
-# Servidor · Despliegue · Diseño
+# Servidor, Despliegue y Diseño
 
 Presentación interactiva desarrollada como proyecto para los módulos de **Entorno Servidor**, **Despliegue de Aplicaciones Web** y **Diseño de Interfaces Web**.
 
@@ -6,7 +6,7 @@ Presentación interactiva desarrollada como proyecto para los módulos de **Ento
 
 - `/` — Inicio: presentación y acceso rápido a cada sección
 - `/servidor` — Tipos de servidores, Apache, Nginx y LiteSpeed con ejemplos de configuración
-- `/despliegue` — Proceso de despliegue de aplicaciones web
+- `/despliegue` — Qué es Docker, cómo se despliega una aplicación con Docker y por qué es útil
 - `/diseno` — Vite, React, JSX y Tailwind CSS con ejemplos de código
 - `/conclusion` — Reflexión final, aprendizajes, mejoras y herramientas favoritas
 - `/contacto` — Formulario de contacto y perfil personal
