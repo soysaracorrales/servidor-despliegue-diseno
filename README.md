@@ -2,6 +2,8 @@
 
 Presentación interactiva desarrollada como proyecto para los módulos de **Entorno Servidor**, **Despliegue de Aplicaciones Web** y **Diseño de Interfaces Web**.
 
+🔗 **Accede a la aplicación aquí:** [servidor-despliegue-diseno.netlify.app](https://servidor-despliegue-diseno.netlify.app/)
+
 ## Secciones
 
 - `/` - Inicio: presentación y acceso rápido a cada sección
