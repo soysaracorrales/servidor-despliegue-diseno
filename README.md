@@ -21,6 +21,7 @@ Presentación interactiva desarrollada como proyecto para los módulos de **Ento
 - **React 19** - interfaz por componentes
 - **Tailwind CSS 4** - estilos con clases predefinidas
 - **React Router 7** - enrutamiento client-side
+- **EmailJS** - envío de correos desde el formulario de contacto sin backend
 
 ---
 
@@ -38,6 +39,18 @@ npm run build
 
 # Previsualizar el build
 npm run preview
+```
+
+---
+
+## Variables de entorno
+
+El formulario de contacto usa [EmailJS](https://www.emailjs.com). Para que funcione en local, crea un archivo `.env` en la raíz con estas variables:
+
+```
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
 ```
 
 ---

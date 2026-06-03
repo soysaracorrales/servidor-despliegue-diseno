@@ -1,22 +1,49 @@
 /* FormularioContacto.jsx: Formulario de contacto con campos de nombre,
 correo, asunto y mensaje, y confirmación al enviar */
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export function FormularioContacto() {
-  // Estado con los valores actuales de cada campo del formulario
+  // Estado con los valores de cada campo del formulario
   const [datosFormulario, setDatosFormulario] = useState({ nombre: '', email: '', asunto: '', mensaje: '' });
-  // Estado para controlar si el formulario ya fue enviado
+  // Estado para mostrar mensaje de confirmación al enviar exitosamente
   const [enviado, setEnviado] = useState(false);
+  // Estado para mostrar indicador de envío mientras se procesa el formulario
+  const [enviando, setEnviando] = useState(false);
+  // Estado para mostrar mensaje de error si falla el envío del formulario
+  const [error, setError] = useState(false);
 
-  // Función para actualizar el campo correspondiente al escribir
+  // Actualiza el campo correspondiente al input que cambia
   function alCambiar(evento) {
     setDatosFormulario({ ...datosFormulario, [evento.target.name]: evento.target.value });
   }
 
-  // Función para gestionar el envío del formulario
-  function enviarFormulario(evento) {
+  // Función que se ejecuta al enviar el formulario, envía los datos a EmailJS
+  async function enviarFormulario(evento) {
     evento.preventDefault();
-    setEnviado(true);
+    setEnviando(true);
+    setError(false);
+    try {
+      // Se envían los datos a EmailJS usando las variables de entorno para el servicio, plantilla y clave pública
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          nombre: datosFormulario.nombre,
+          name: datosFormulario.nombre,
+          email: datosFormulario.email,
+          asunto: datosFormulario.asunto,
+          title: datosFormulario.asunto,
+          mensaje: datosFormulario.mensaje,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      setEnviado(true);
+    } catch {
+      setError(true);
+    } finally {
+      setEnviando(false);
+    }
   }
 
   {/* Contenedor del formulario centrado verticalmente */}
@@ -33,6 +60,10 @@ export function FormularioContacto() {
           Cuéntame tu proyecto, tu idea o simplemente saluda. Estaré encantada de leerte y responderte.
         </p>
       </div>
+
+      {error && (
+        <p className="text-red-500 text-sm">Algo ha fallado. Por favor, inténtalo de nuevo.</p>
+      )}
 
       {/* Si ya se envió, muestra confirmación; si no, muestra el formulario */}
       {enviado ? (
@@ -73,8 +104,8 @@ export function FormularioContacto() {
           </div>
 
           {/* Botón de envío */}
-          <button type="submit" className="flex items-center gap-2 self-start px-6 py-3 rounded-full bg-(--color-dark-text) text-white text-sm font-medium hover:bg-black transition-all duration-300 cursor-pointer">
-            Enviar
+          <button type="submit" disabled={enviando} className="flex items-center gap-2 self-start px-6 py-3 rounded-full bg-(--color-dark-text) text-white text-sm font-medium hover:bg-black transition-all duration-300 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
+            {enviando ? 'Enviando...' : 'Enviar'}
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="22" y1="2" x2="11" y2="13" />
               <polygon points="22 2 15 22 11 13 2 9 22 2" />
