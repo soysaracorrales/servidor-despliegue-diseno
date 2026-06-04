@@ -6,7 +6,7 @@ export function Diapositiva01() {
 
       {/* Etiqueta superior */}
       <span className="inline-flex items-center bg-(--color-dark-text) text-white text-[10px] font-semibold tracking-[0.2em] uppercase px-3.5 py-1 rounded-full mb-6 sm:mb-8">
-        Despliegue de aplicaciones web
+        Entorno de Servidores Web
       </span>
 
       {/* Título y descripción */}
